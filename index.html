@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<title>Gone Phishin'</title>
+	<!-- Linking Bootstrap CDN -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- Linking external CSS -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="page-header">
+
+			<h1>Hangman: Gone Phishin'</h1>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-12">
+
+				<h2>Can you name all of these Phish songs or are you a total noob? Guess a letter to start the game!</h2>
+
+			</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class="col-md-8">
+
+				<h3 id="win-count">Wins: </h3>
+
+				<h3>Current Word:</h3>
+
+				<div id="word-display"></div>
+
+				<h3 id="guesses-remaining">Guesses Remaining: </h3>
+
+				<h3 id="letters-guessed">Letters Guessed: </h3>
+
+			</div>
+
+			<div class="col-md-4">
+
+				<canvas width="450" height="225" id="hangman"></canvas>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Linking javascript file -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>

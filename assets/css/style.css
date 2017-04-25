@@ -1,0 +1,29 @@
+body {
+	background-image: url('../images/phish-wallpaper-4.jpg');
+	color: white;
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "Special Elite", cursive;
+}
+
+h1, h2, h3, {
+	text-align: center;
+}
+
+h1 {
+	color: #E50800;
+}
+
+#word-display {
+	word-spacing: 10px;
+	font-size: 50px;
+	text-align: center
+}
+
+canvas {
+	color: white;
+}
+
+#hangman {
+	color: white;
+}
