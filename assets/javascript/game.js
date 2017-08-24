@@ -33,55 +33,55 @@ function newGame() {
 	document.getElementById("letters-guessed").innerHTML = "Letters Guessed: " + lettersGuessed;
 	console.log(randomSong);
 	console.log(songDisplay);
-	startCanvas();
+	// startCanvas();
 }
 
-function startCanvas() {
-	var canvas = document.getElementById("hangman");
-	if (canvas.getContext) {
-		var ctx = canvas.getContext("2d");
-		ctx.beginPath();
-		ctx.moveTo(450, 225);
-   		ctx.lineTo(450, 0);
-    	ctx.lineTo(225, 0);
-    	ctx.lineTo(225, 45);
-    	ctx.stroke();
-    	ctx.closePath();
-    }
-}
+// function startCanvas() {
+// 	var canvas = document.getElementById("hangman");
+// 	if (canvas.getContext) {
+// 		var ctx = canvas.getContext("2d");
+// 		ctx.beginPath();
+// 		ctx.moveTo(450, 225);
+//    		ctx.lineTo(450, 0);
+//     	ctx.lineTo(225, 0);
+//     	ctx.lineTo(225, 45);
+//     	ctx.stroke();
+//     	ctx.closePath();
+//     }
+// }
 
 // Need to add cases to switch statement for each iteration of incorrectCount
-function draw() {
-	var canvas = document.getElementById("hangman");
-	if (canvas.getContext) {
-		var ctx = canvas.getContext("2d");
+// function draw() {
+// 	var canvas = document.getElementById("hangman");
+// 	if (canvas.getContext) {
+// 		var ctx = canvas.getContext("2d");
 
-		switch(incorrectCount) {
-			case 1:
+// 		switch(incorrectCount) {
+// 			case 1:
 
-			break;
+// 			break;
 
-			case 2:
+// 			case 2:
 
-			break;
+// 			break;
 
-			case 3: 
+// 			case 3: 
 
-			break;
+// 			break;
 
-			case 4:
+// 			case 4:
 
-			break;
+// 			break;
 
-			case 5:
+// 			case 5:
 
-			break;
+// 			break;
 
-			case 6:
+// 			case 6:
 
-		}
-	}
-}
+// 		}
+// 	}
+// }
 
 function winGame() {
 	wins++;
