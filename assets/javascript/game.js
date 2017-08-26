@@ -31,8 +31,6 @@ function newGame() {
 	document.getElementById("word-display").innerHTML = songDisplay.join("");
 	document.getElementById("guesses-remaining").innerHTML = "Guesses Remaining: " + guessesRemaining;
 	document.getElementById("letters-guessed").innerHTML = "Letters Guessed: " + lettersGuessed;
-	console.log(randomSong);
-	console.log(songDisplay);
 	// startCanvas();
 }
 
@@ -101,19 +99,13 @@ function loseGame() {
 newGame();
 
 document.onkeyup = function() {
-
 	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-	console.log(userGuess);
-
 	if (/^[a-z ]+$/.test(userGuess)) {
-
 		for (i = 0; i < randomSong.length; i++) {
-
 			if (randomSong[i] === userGuess) {
 				songDisplay[i] = userGuess;
 				document.getElementById("word-display").innerHTML = songDisplay.join("");
 			}
-
 			if (randomSong.indexOf(userGuess) === -1 && lettersGuessed.indexOf(userGuess) === -1) {
 				guessesRemaining--;
 				incorrectCount++;
@@ -122,15 +114,11 @@ document.onkeyup = function() {
 				document.getElementById("letters-guessed").innerHTML = "Letters Guessed: " + lettersGuessed.join(",");
 			}
 		}
-
 	}
-
 	if (songDisplay.indexOf("_") === -1) {
 		setTimeout(winGame, 100);
 	}
-
 	else if (guessesRemaining === 0) {
 		setTimeout(loseGame, 100);
 	}
-
 }
