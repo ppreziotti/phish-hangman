@@ -1,10 +1,10 @@
 // GLOBAL VARIABLES
 // ============================================================================================
-var songs = ["tweezer", "fluffhead", "wilson", "maze", "lizards", "fly famous mockingbird", 
-			"chalk dust torture", "fuego", "you enjoy myself", "harry hood", "lawn boy", 
-			"bathtub gin", "run like an antelope", "split open and melt", "golgi apparatus",
-			"tweezer reprise", "down with disease", "prince caspian", "character zero",
-			"theme from the bottom", "taste", "free", "weekapaug groove", "ghost"];
+var songs = ["Tweezer", "Fluffhead", "Wilson", "Maze", "Lizards", "Fly Famous Mockingbird", 
+			"Chalk Dust Torture", "Fuego", "You Enjoy Myself", "Harry Hood", "Lawn Boy", 
+			"Bathtub Gin", "Run Like an Antelope", "Split Open and Melt", "Golgi Apparatus",
+			"Tweezer Reprise", "Down With Disease", "Prince Caspian", "Character Zero",
+			"Theme From the Bottom", "Taste", "Free", "Weekapaug Groove", "Ghost"];
 var wins = 0;
 var randomSong;
 var songDisplay;
@@ -15,7 +15,7 @@ var incorrectCount;
 // FUNCTIONS
 // ==========================================================================================
 function newGame() {
-	randomSong = songs[Math.floor(Math.random() * songs.length)];
+	randomSong = songs[Math.floor(Math.random() * songs.length)].toUpperCase();
 	guessesRemaining = 6;
 	lettersGuessed = [];
 	songDisplay = [];
@@ -99,8 +99,8 @@ function loseGame() {
 newGame();
 
 document.onkeyup = function() {
-	var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-	if (/^[a-z ]+$/.test(userGuess)) {
+	var userGuess = String.fromCharCode(event.keyCode).toUpperCase();
+	if (/^[A-Z ]+$/.test(userGuess)) {
 		for (i = 0; i < randomSong.length; i++) {
 			if (randomSong[i] === userGuess) {
 				songDisplay[i] = userGuess;
@@ -111,7 +111,7 @@ document.onkeyup = function() {
 				incorrectCount++;
 				lettersGuessed.push(userGuess);
 				document.getElementById("guesses-remaining").innerHTML = "Guesses Remaining: " + guessesRemaining;
-				document.getElementById("letters-guessed").innerHTML = "Letters Guessed: " + lettersGuessed.join(",");
+				document.getElementById("letters-guessed").innerHTML = "Letters Guessed: " + lettersGuessed.join(", ");
 			}
 		}
 	}
